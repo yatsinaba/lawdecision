@@ -1,0 +1,9 @@
+AddDefaultCharset utf-8
+
+
+#Redirect 301 /index.html /ru/
+
+#Options +FollowSymLinks
+RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^www.lawdecision.com$ [NC]
+#RewriteRule ^(.*)$ http://lawdecision.com/$1 [R=301,L]
