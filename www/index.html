@@ -1,41 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="LawdecisionApp">
+<header>
 <head>
     <meta httm-equiv="Content-type" content="text/html" charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+   <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
 
-    <script src="js/jquery-1.11.3.js" type="text/javascript"></script>
-    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <!-- <script src="js/jquery-1.11.3.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>-->
 </head>
 </header>
-<body>
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-        <a href="/" class="navbar-brand">Lawdecision</a>
-        <button type="button" class='navbar-toggle' data-toggle='collapse' data-target=".navbar-collapse">
-            <span class="sr-only">toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
+
+<body layout="column" ng-controller="AppCtrl">
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-aria/angular-aria.js"></script>
+<script src="/bower_components/angular-animate/angular-animate.js"></script>
+<script src="/bower_components/angular-material/angular-material.js"></script>
+<script src="js/angularAPP.js"></script>
+
+
+<md-toolbar layout="row">
+
+    <div class="md-toolbar-tools">
+        <div class="brand">
+            <h3>Lawdecision</h3>
         </div>
-<div id="navbar" class="navbar-collapse collapse">
-
-        <ul class="nav navbar-nav navbar-right">
-            <li>О нас</li>
-            <li>Вы получаете</li>
-            <li>Направления</li>
-            <li>Стоимость услуг</li>
-            <li>Контакты</li>
-
-        </ul>
+        <span flex></span>
+        <md-button ng-click="toggleSidenav('right')" hide-gt-sm class="md-icon-button">
+            <md-icon aria-label="Menu" md-svg-icon="svg/menu.svg"></md-icon>
+        </md-button>
     </div>
+</md-toolbar>
+<div layout="row" flex>
+    <md-sidenav layout="column" class="md-sidenav-right md-whiteframe-z2" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')">
+
+    </md-sidenav>
+    <div layout="column" flex id="content">
+        <md-content layout="column" flex class="md-padding">
+        </md-content>
     </div>
-</nav>
+</div>
 </body>
 </html>
